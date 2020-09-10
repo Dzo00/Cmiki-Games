@@ -50,6 +50,85 @@
             </div>
         </div>
     </header>
+	<!-- MODAL LOG -->
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="text-white modal-dialog" role="document">
+            <div class="modal-content bg-gray-dark">
+            <div class="modal-header text-center border-color-white">
+                <h4 class="modal-title w-100 font-weight-bold bg-gray-dark">Log In</h4>
+                <button type="button" class="text-white close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="obrada.php" method="POST">
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-3">
+                        <i class="fas fa-envelope prefix text-white"></i>
+                        <label class="text-white" for="emailReg">Email</label>
+                        <input type="email" id="emailReg" name="emailReg" class="form-control fc1">
+                    </div>
+    
+                    <div class="md-form mb-2">
+                        <i class="fas fa-lock prefix text-white"></i>
+                        <label class="text-white" for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-control fc1">
+                    </div>
+    
+                </div>
+                <div class="modal-footer d-flex justify-content-center border-color-white">
+                    <button type="submit" id="btnLog" name="btnLog" class="btn btn-white font-weight-bold text-white btn-hover rounded-lg border">Log In</button>
+                </div>
+            </form>
+        </div>
+        </div>
+        </div>
+        <!-- KRAJ MODAL LOG -->
+         <!-- MODAL ZA REGISTRACIJU -->
+         <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+         <div class="text-white modal-dialog" role="document">
+         <div class="modal-content bg-gray-dark">
+             <div class="modal-header text-center border-color-white">
+             <h4 class="modal-title w-100 font-weight-bold text-white">Sing Up</h4>
+             <button type="button" class="text-white close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+             </div>
+             <form action="obrada1.php" method="POST">
+                 <div class="modal-body mx-3">
+                 <div class="md-form mb-3">
+                     <i class="fas fa-user prefix text-white"></i>
+                     <label class="text-white" for="name">Username</label>
+                     <input type="text" id="name" name="name" class="form-control fc1">
+                 </div>
+                 <div class="md-form mb-3">
+                     <i class="fas fa-envelope prefix text-white"></i>
+                     <label class="text-white" for="emailReg">Email</label>
+                     <input type="email" id="emailReg" name="emailReg" class="form-control fc1">
+                 </div>
+         
+                 <div class="md-form mb-3">
+                     <i class="fas fa-lock prefix text-white"></i>
+                     <label class="text-white" for="password">Password</label>
+                     <input type="password" id="password" name="password" class="form-control fc1">
+                 </div>
+                 
+                 <div class="md-form mb-2">
+                     <i class="fas fa-lock prefix text-white"></i>
+                     <label class="text-white" for="passwordRepeat">Confirm password</label>
+                     <input type="password" id="passwordRepeat" name="passwordRepeat" class="form-control fc1">
+                     <div class="text-white mt-1"></div>
+                 </div>
+ 
+                 </div>
+                 <div class="modal-footer d-flex justify-content-center">
+                 <button type="submit" id="btnReg" name="btnReg" class="btn btn-white font-weight-bold text-white rounded-lg border border-color-white border-size-1 hover1">Sign Up</button>
+                 </div>
+             </form>
+         </div>
+         </div>
+     </div>
+     <!-- KRAJ MODALA REGISTRACIJA -->
     <main class="bg-black">
         <div id="cover pt-5">
             <div id="pre-content" class="pl-5 py-4 align-items-center">                
