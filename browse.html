@@ -5,29 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cmiki Games</title>    
     <meta name="author" content="Jovana Lazarevic"/>    
-	<meta name="description" content=""/>
-    <meta name="keywords" content=""/>
+	<meta name="description" content="Browse and find your new favorite game!"/>
+    <meta name="keywords" content="browse games epic cmiki"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- My CSS -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
     <!-- FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bg-black">
     <header class="d-flex justify-content-between align-items-center">
         <div id="left-menu" class="col-sm-7 col-md-8 col-lg-7">
-            <a href="index.html" id="aLogo"><img id="logo" class="img-fluid mx-2" src="assets/images/logo2.png" alt="Epic Games Logo"></a>
+            <a href="index.html" id="aLogo"><img id="logo" class="img-fluid mx-2" src="assets/images/logo1.png" alt="Epic Games Logo"></a>
             <a href="index.html" class="h5 mx-2 pb-4 text-white">Store</a>
             <a href="news.html" class="h5 mx-2 pb-4">News</a>
         </div>
         <div id="right-menu" class="d-none d-sm-block col-4 col-sm-4 col-md-4 col-lg-3 mb-2"> 
             <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4" data-toggle="modal" data-target="#modalLoginForm">Log in</a>
             <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4" data-toggle="modal" data-target="#modalRegisterForm">Sign Up</a>
-            <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4">Author</a>
+            <a href="author.html" class="mx-2 mx-sm-1 mx-lg-2 pb-4">Author</a>
         </div>
         <!-- <div class="d-block d-sm-none"><a href="#" id="menu"></a></div> -->
         <button type="button" class="btn btn-demo d-block d-sm-none" data-toggle="modal" data-target="#sidebar">
@@ -40,7 +40,7 @@
                         <div class="nav flex-column">
                             <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4" data-toggle="modal" data-target="#modalLoginForm">Log in</a>
                             <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4" data-toggle="modal" data-target="#modalRegisterForm">Sign Up</a>
-                            <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4">Author</a>
+                            <a href="author.html" class="mx-2 mx-sm-1 mx-lg-2 pb-4">Author</a>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -316,7 +316,15 @@
         </div>         
        </div>
     </main> 
-    <footer>
+    <footer class="d-flex bg-gray-dark">
+        <div class="col-4"></div>
+        <div class="col-4 white-text text-center">
+            <p class="text-white m-0">COPYRIGHT © <script>var datum= new Date(); document.write(datum.getFullYear());</script> Created by Jovana Lazarevic</p>
+        </div>
+        <div class="col-4 text-center">
+            <a href="assets/css/style.scss" class="text-orange mx-1">Scss</a>
+            <a href="sitemap.xml" class="text-orange mx-1">Sitemap</a>
+        </div>
     </footer>
     <!-- Compiled and minified JavaScript -->
     <script src="assets/js/jquery-3.4.1.min.js"></script>
