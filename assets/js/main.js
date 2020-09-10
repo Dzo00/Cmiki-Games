@@ -13,8 +13,8 @@ window.onload = function(){
 
 //RESPONSIVE CSS FUNKCIJA
 function PromeniCSSPoVeliciniEkrana(){
-  console.log(screen.width);
-  if(screen.width<776)
+  console.log(window.innerWidth);
+  if(window.innerWidth<776)
   {
     $('#a-img').removeClass("col");
   }
