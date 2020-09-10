@@ -2,6 +2,10 @@ window.onload = function(){
   $(document).ready(function(){
     $('.carousel').carousel();
   });
+  
+   $("#btnLog").click(proveraLog);
+   $("#btnReg").click(proverRegister);
+  
   //RESPONSIVE CSS
   $(window).resize(PromeniCSSPoVeliciniEkrana);
   PromeniCSSPoVeliciniEkrana();
@@ -18,4 +22,83 @@ function PromeniCSSPoVeliciniEkrana(){
   {
     $('#a-img').addClass("col");
   }
+}
+
+//LOGOVANJE
+function proveraLog(e){
+    e.preventDefault();
+    
+    var email, pass;
+    email = document.getElementById("emailLog").value;
+    pass= document.getElementById("pass").value;
+    let success=false;
+    if(!rePassword.test(pass) || pass==""){
+        $("#pass").css("border-color","#ee0f0f").next().text("Email or password don't match!");
+    }
+    else{
+        $("#pass").css("border-color","#08b108").next().text(" ");
+        
+    }
+    if(!reEmail.test(email)){
+        $("#emailLog").css("border-color","#ee0f0f").attr("placeholder","eg. john@gmail.com");
+    }
+    else{
+        $("#emailLog").css("border-color","#08b108");
+        success=true;
+    }
+    if(success){
+        window.location.href = "https://dzo00.github.io/Cmiki-Games/index.html";
+    }
+}
+
+//REGISTRACIJA
+function proverRegister(e){
+    e.preventDefault();
+    
+    var ime, reIme, email, password;
+    ime= document.getElementById("name").value;
+    
+    email = document.getElementById("emailReg").value;
+    password= document.getElementById("password").value;
+    passCheck= document.getElementById("passwordRepeat").value;
+    console.log(password); console.log(passCheck);
+    reIme=/^[A-Z][a-z]{2,12}(\s[A-z][a-z]{2,12})+$/;
+
+    let success1=true;
+
+    if(!reIme.test(ime)){
+        $("#name").css("border-color","#ee0f0f").attr("placeholder","eg. John Doe");
+        success1= false;
+    }
+    else{
+        $("#name").css("border-color","#08b108");
+    }
+    if(!rePassword.test(password) || password==""){
+        $("#password").css("border-color","#ee0f0f").next().text("Pass must contain at least 1 uppercase, 1 lowercase letter and an number, and contain 8-15 characters!");
+        success1= false;
+    }
+    else{
+        $("#password").css("border-color","#08b108").next().text(" ");
+    }
+    if(!reEmail.test(email)){
+        $("#emailReg").css("border-color","#ee0f0f").attr("placeholder","eg. john@gmail.com");
+        success1= false;
+    }
+    else{
+        $("#emailReg").css("border-color","#08b108");
+    }
+    if(!rePassword.test(passCheck) && passCheck==""){
+        $("#passwordRepeat").css("border-color","#ee0f0f").next().text("This field can not stay empty!");
+        success1= false;
+    }
+    else if(passCheck!=password){
+        $("#passwordRepeat").css("border-color","#ee0f0f").next().text("Passwords don't match!");
+        success1= false;
+    }
+    else{
+        $("#passwordRepeat").css("border-color","#08b108").next().text(" ");
+    }
+    if(success1){
+        window.location.href = "https://dzo00.github.io/Cmiki-Games/index.html";
+    }  
 }
