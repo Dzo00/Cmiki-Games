@@ -33,10 +33,10 @@ function proveraLog(e){
     pass= document.getElementById("pass").value;
     let success=false;
     if(!rePassword.test(pass) || pass==""){
-        $("#pass").css("border-color","#ee0f0f").next().text("Email or password don't match!");
+        $("#pass").css("border-color","#ee0f0f");
     }
     else{
-        $("#pass").css("border-color","#08b108").next().text(" ");
+        $("#pass").css("border-color","#08b108");
         
     }
     if(!reEmail.test(email)){
@@ -74,7 +74,7 @@ function proverRegister(e){
         $("#name").css("border-color","#08b108");
     }
     if(!rePassword.test(password) || password==""){
-        $("#password").css("border-color","#ee0f0f").next().text("Pass must contain at least 1 uppercase, 1 lowercase letter and an number, and contain 8-15 characters!");
+        $("#password").css("border-color","#ee0f0f");
         success1= false;
     }
     else{
@@ -88,15 +88,15 @@ function proverRegister(e){
         $("#emailReg").css("border-color","#08b108");
     }
     if(!rePassword.test(passCheck) && passCheck==""){
-        $("#passwordRepeat").css("border-color","#ee0f0f").next().text("This field can not stay empty!");
+        $("#passwordRepeat").css("border-color","#ee0f0f");
         success1= false;
     }
     else if(passCheck!=password){
-        $("#passwordRepeat").css("border-color","#ee0f0f").next().text("Passwords don't match!");
+        $("#passwordRepeat").css("border-color","#ee0f0f");
         success1= false;
     }
     else{
-        $("#passwordRepeat").css("border-color","#08b108").next().text(" ");
+        $("#passwordRepeat").css("border-color","#08b108");
     }
     if(success1){
         window.location.href = "https://dzo00.github.io/Cmiki-Games/index.html";
