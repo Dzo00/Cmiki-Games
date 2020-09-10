@@ -233,6 +233,30 @@ input:active, input:focus {
   background-image: url("../images/crysis-poster1.png");
 }
 
+#headline h1 {
+  font-size: 40px;
+}
+
+#a-img img {
+  width: 25%;
+}
+
+#a-desc p {
+  font-size: 20px;
+  background-color: transparent;
+  background: linear-gradient(45deg, #dbd2bf 25%, #ff9800 65%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#a-desc a {
+  font-size: 22px;
+}
+
+#a-desc a:hover {
+  border-bottom: 1px solid #f86c1b;
+}
+
 @media screen and (max-width: 1660px) {
   .browse .note {
     left: 100px;
