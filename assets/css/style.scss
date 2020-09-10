@@ -11,6 +11,7 @@ $background-color :#2a2a2a;
 $background-black :#000;
 $link-color: #ccc;
 $color-orange:#f86c1b;
+$linear-gradient: linear-gradient(45deg, rgb(219, 210, 191) 25%, #ff9800 65%);
 .bg-gray-dark{
     background-color: $background-color;
 }
@@ -187,6 +188,27 @@ input{
 }
 .poster{
     background-image: url("../images/crysis-poster1.png");
+}
+#headline h1 {
+    font-size:40px;
+}
+#a-img img{
+    width:25%;
+}
+#a-desc {
+    p{
+        font-size:20px;
+        background-color: transparent;
+        background: $linear-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    a{
+        font-size: 22px; 
+        &:hover{
+            border-bottom: 1px solid $color-orange;
+        }
+    }
 }
 @media screen and (max-width: 1660px){
     .browse .note{
