@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cmiki Games</title>    
+    <meta name="author" content="Jovana Lazarevic"/>    
+	<meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <!-- My CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="d-flex justify-content-between align-items-center">
+        <div id="left-menu" class="col-sm-7 col-md-8 col-lg-7">
+            <a href="index.html" id="aLogo"><img id="logo" class="img-fluid mx-2" src="assets/images/logo1.png" alt="Epic Games Logo"></a>
+            <a href="index.html" class="h5 mx-2 pb-4 text-white">Store</a>
+            <a href="news.html" class="h5 mx-2 pb-4">News</a>
+        </div>
+        <div id="right-menu" class="d-none d-sm-block col-4 col-sm-4 col-md-4 col-lg-3 mb-2"> 
+            <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4" data-toggle="modal" data-target="#modalLoginForm">Log in</a>
+            <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4" data-toggle="modal" data-target="#modalRegisterForm">Sign Up</a>
+            <a href="author.html" class="mx-2 mx-sm-1 mx-lg-2 pb-4">Author</a>
+        </div>
+        <!-- <div class="d-block d-sm-none"><a href="#" id="menu"></a></div> -->
+        <button type="button" class="btn btn-demo d-block d-sm-none" data-toggle="modal" data-target="#sidebar">
+            <i class="fas fa-bars text-white mr-3"></i>
+        </button>
+        <div class="modal left fade" id="sidebar" tabindex="" role="dialog" aria-labelledby="sidebar" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="nav flex-column">
+                            <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4" data-toggle="modal" data-target="#modalLoginForm">Log in</a>
+                            <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4" data-toggle="modal" data-target="#modalRegisterForm">Sign Up</a>
+                            <a href="author.html" class="mx-2 mx-sm-1 mx-lg-2 pb-4">Author</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- MODAL LOG -->
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="text-white modal-dialog" role="document">
+            <div class="modal-content bg-gray-dark">
+            <div class="modal-header text-center border-color-white">
+                <h4 class="modal-title w-100 font-weight-bold bg-gray-dark">Log In</h4>
+                <button type="button" class="text-white close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="obrada.php" method="POST">
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-3">
+                        <i class="fas fa-envelope prefix text-white"></i>
+                        <label class="text-white" for="emailReg">Email</label>
+                        <input type="email" id="emailReg" name="emailReg" class="form-control fc1">
+                    </div>
+    
+                    <div class="md-form mb-2">
+                        <i class="fas fa-lock prefix text-white"></i>
+                        <label class="text-white" for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-control fc1">
+                    </div>
+    
+                </div>
+                <div class="modal-footer d-flex justify-content-center border-color-white">
+                    <button type="submit" id="btnLog" name="btnLog" class="btn btn-white font-weight-bold text-white btn-hover rounded-lg border">Log In</button>
+                </div>
+            </form>
+        </div>
+        </div>
+        </div>
+        <!-- KRAJ MODAL LOG -->
+         <!-- MODAL ZA REGISTRACIJU -->
+         <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+         <div class="text-white modal-dialog" role="document">
+         <div class="modal-content bg-gray-dark">
+             <div class="modal-header text-center border-color-white">
+             <h4 class="modal-title w-100 font-weight-bold text-white">Sing Up</h4>
+             <button type="button" class="text-white close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+             </div>
+             <form action="obrada1.php" method="POST">
+                 <div class="modal-body mx-3">
+                 <div class="md-form mb-3">
+                     <i class="fas fa-user prefix text-white"></i>
+                     <label class="text-white" for="name">Username</label>
+                     <input type="text" id="name" name="name" class="form-control fc1">
+                 </div>
+                 <div class="md-form mb-3">
+                     <i class="fas fa-envelope prefix text-white"></i>
+                     <label class="text-white" for="emailReg">Email</label>
+                     <input type="email" id="emailReg" name="emailReg" class="form-control fc1">
+                 </div>
+         
+                 <div class="md-form mb-3">
+                     <i class="fas fa-lock prefix text-white"></i>
+                     <label class="text-white" for="password">Password</label>
+                     <input type="password" id="password" name="password" class="form-control fc1">
+                 </div>
+                 
+                 <div class="md-form mb-2">
+                     <i class="fas fa-lock prefix text-white"></i>
+                     <label class="text-white" for="passwordRepeat">Confirm password</label>
+                     <input type="password" id="passwordRepeat" name="passwordRepeat" class="form-control fc1">
+                     <div class="text-white mt-1"></div>
+                 </div>
+ 
+                 </div>
+                 <div class="modal-footer d-flex justify-content-center">
+                 <button type="submit" id="btnReg" name="btnReg" class="btn btn-white font-weight-bold text-white rounded-lg border border-color-white border-size-1 hover1">Sign Up</button>
+                 </div>
+             </form>
+         </div>
+         </div>
+     </div>
+     <!-- KRAJ MODALA REGISTRACIJA -->
+    <main class="bg-black">
+       <div id="cover">
+            <div id="pre-content" class="d-flex justify-content-between py-4 align-items-center">
+                <div id="left-pc" class="col-7 col-sm-8">
+                    <a href="index.html">Discover</a>
+                    <a href="browse.html" class="mx-2">Browse</a>
+                </div>
+            </div>    
+        </div>
+    </main> 
+    <footer>
+    </footer>
+    <!-- Compiled and minified JavaScript -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="assets/js/main.js"></script> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

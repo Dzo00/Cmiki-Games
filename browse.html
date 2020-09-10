@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cmiki Games</title>    
+    <meta name="author" content="Jovana Lazarevic"/>    
+	<meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <!-- My CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="d-flex justify-content-between align-items-center">
+        <div id="left-menu" class="col-sm-7 col-md-8 col-lg-7">
+            <a href="index.html" id="aLogo"><img id="logo" class="img-fluid mx-2" src="assets/images/logo1.png" alt="Epic Games Logo"></a>
+            <a href="index.html" class="h5 mx-2 pb-4 text-white">Store</a>
+            <a href="news.html" class="h5 mx-2 pb-4">News</a>
+        </div>
+        <div id="right-menu" class="d-none d-sm-block col-4 col-sm-4 col-md-4 col-lg-3 mb-2"> 
+            <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4" data-toggle="modal" data-target="#modalLoginForm">Log in</a>
+            <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4" data-toggle="modal" data-target="#modalRegisterForm">Sign Up</a>
+            <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4">Author</a>
+        </div>
+        <!-- <div class="d-block d-sm-none"><a href="#" id="menu"></a></div> -->
+        <button type="button" class="btn btn-demo d-block d-sm-none" data-toggle="modal" data-target="#sidebar">
+            <i class="fas fa-bars text-white mr-3"></i>
+        </button>
+        <div class="modal left fade" id="sidebar" tabindex="" role="dialog" aria-labelledby="sidebar" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="nav flex-column">
+                            <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4" data-toggle="modal" data-target="#modalLoginForm">Log in</a>
+                            <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4" data-toggle="modal" data-target="#modalRegisterForm">Sign Up</a>
+                            <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4">Author</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- MODAL LOG -->
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="text-white modal-dialog" role="document">
+            <div class="modal-content bg-gray-dark">
+            <div class="modal-header text-center border-color-white">
+                <h4 class="modal-title w-100 font-weight-bold bg-gray-dark">Log In</h4>
+                <button type="button" class="text-white close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="obrada.php" method="POST">
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-3">
+                        <i class="fas fa-envelope prefix text-white"></i>
+                        <label class="text-white" for="emailReg">Email</label>
+                        <input type="email" id="emailReg" name="emailReg" class="form-control fc1">
+                    </div>
+    
+                    <div class="md-form mb-2">
+                        <i class="fas fa-lock prefix text-white"></i>
+                        <label class="text-white" for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-control fc1">
+                    </div>
+    
+                </div>
+                <div class="modal-footer d-flex justify-content-center border-color-white">
+                    <button type="submit" id="btnLog" name="btnLog" class="btn btn-white font-weight-bold text-white btn-hover rounded-lg border">Log In</button>
+                </div>
+            </form>
+        </div>
+        </div>
+        </div>
+        <!-- KRAJ MODAL LOG -->
+         <!-- MODAL ZA REGISTRACIJU -->
+         <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+         <div class="text-white modal-dialog" role="document">
+         <div class="modal-content bg-gray-dark">
+             <div class="modal-header text-center border-color-white">
+             <h4 class="modal-title w-100 font-weight-bold text-white">Sing Up</h4>
+             <button type="button" class="text-white close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+             </div>
+             <form action="obrada1.php" method="POST">
+                 <div class="modal-body mx-3">
+                 <div class="md-form mb-3">
+                     <i class="fas fa-user prefix text-white"></i>
+                     <label class="text-white" for="name">Username</label>
+                     <input type="text" id="name" name="name" class="form-control fc1">
+                 </div>
+                 <div class="md-form mb-3">
+                     <i class="fas fa-envelope prefix text-white"></i>
+                     <label class="text-white" for="emailReg">Email</label>
+                     <input type="email" id="emailReg" name="emailReg" class="form-control fc1">
+                 </div>
+         
+                 <div class="md-form mb-3">
+                     <i class="fas fa-lock prefix text-white"></i>
+                     <label class="text-white" for="password">Password</label>
+                     <input type="password" id="password" name="password" class="form-control fc1">
+                 </div>
+                 
+                 <div class="md-form mb-2">
+                     <i class="fas fa-lock prefix text-white"></i>
+                     <label class="text-white" for="passwordRepeat">Confirm password</label>
+                     <input type="password" id="passwordRepeat" name="passwordRepeat" class="form-control fc1">
+                     <div class="text-white mt-1"></div>
+                 </div>
+ 
+                 </div>
+                 <div class="modal-footer d-flex justify-content-center">
+                 <button type="submit" id="btnReg" name="btnReg" class="btn btn-white font-weight-bold text-white rounded-lg border border-color-white border-size-1 hover1">Sign Up</button>
+                 </div>
+             </form>
+         </div>
+         </div>
+     </div>
+     <!-- KRAJ MODALA REGISTRACIJA -->
+    <main class="bg-black">
+       <div id="cover">
+            <div id="pre-content" class="d-flex justify-content-between py-4 align-items-center">
+                <div id="left-pc" class="col-7 col-sm-8">
+                    <a href="index.html">Discover</a>
+                    <a href="browse.html" class="mx-2">Browse</a>
+                </div>
+                <div id="right-pc" class="col-5 col-sm-4 col-md-3 col-lg-2">
+                    <input type="search" id="Pretraga" placeholder="Search" class="p-2 rounded border"/>
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>            
+        <div class="d-sm-flex justify-content-between py-6 align-items-center">
+            <div id="filters" class="d-flex flex-row flex-sm-column col-12 col-sm-2 col-md-2 align-self-start mt-5">
+                <h5 class="text-white align-self-center">Filters</h5>
+                <hr/>
+                <div class="btn-group">
+                    <button type="button" class="btn text-white dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+                      Categories
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg-right">
+                      <button class="dropdown-item" type="button">Action</button>
+                      <button class="dropdown-item" type="button">Adventure</button>
+                      <button class="dropdown-item" type="button">Puzzle</button>
+                      <button class="dropdown-item" type="button">Racing</button>
+                      <button class="dropdown-item" type="button">RPG</button>
+                      <button class="dropdown-item" type="button">Shooter</button>
+                      <button class="dropdown-item" type="button">Strategy</button>                      
+                      <button class="dropdown-item" type="button">Survival</button>
+                    </div>
+                  </div>
+                <hr/>
+                <div class="btn-group">
+                    <button type="button" class="btn text-white dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+                      Features
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg-right">
+                      <button class="dropdown-item" type="button">Controller Support</button>
+                      <button class="dropdown-item" type="button">Co-op</button>
+                      <button class="dropdown-item" type="button">Single Player</button>
+                      <button class="dropdown-item" type="button">Single Player</button>
+                      <button class="dropdown-item" type="button">Multiplayer</button>
+                      <button class="dropdown-item" type="button">Windows</button>
+                      <button class="dropdown-item" type="button">Mac OS</button>
+                    </div>
+                  </div>
+                <hr/>
+            </div>
+            <div id="games" class="col-12 col-sm-9 col-md-9 px-3 mt-5">
+                <div class="btn-group">
+                    <button type="button" class="btn text-white dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+                      Sort By:
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg-right bg-muted">
+                      <button class="dropdown-item" type="button">Relevance</button>
+                      <button class="dropdown-item" type="button">Release Date</button>
+                      <button class="dropdown-item" type="button">Alphabetical</button>
+                    </div>
+                  </div>
+                  <div id="rel" class="holder px-3 mt-4">
+                    <div class="row row-cols-sm-6 row-cols-md-4 mt-5">
+                        <div class="card bg-black col-6 col-sm-4 col-lg-3">
+                            <img src="assets/images/darksiders.jpg" class="card-img-top" alt="Darksiders">
+                            <div class="card-body">
+                            <h5 class="card-text text-truncate text-white h6">Darksiders</h5>
+                            <p class="text-muted text-truncate">KAIKO, Vigil Games | THQ Nordic</p>
+                            <div class="d-flex">
+                                <span class="text-orange">$19.99</span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card bg-black col-6 col-sm-4 col-lg-3">
+                            <img src="assets/images/hellpoint-cover.jpg" class="card-img-top" alt="Hellpoint">
+                            <div class="card-body">
+                            <h5 class="card-text text-truncate text-white h6">Hellpoint</h5>
+                            <p class="text-muted text-truncate">Cradle Games | tinyBuild</p>
+                            <div class="d-flex">
+                                <span class="text-orange">$34.99</span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card bg-black col-6 col-sm-4 col-lg-3">
+                            <img src="assets/images/sot.jpeg" class="card-img-top" alt="Sea of Thieves">
+                            <div class="card-body">
+                            <h5 class="card-text text-truncate text-white h6">Sea of Thieves</h5>
+                            <p class="text-muted text-truncate">Rare | Xbox Games Studios</p>
+                            <div class="d-flex">
+                                <span class="text-orange">$40.00</span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card bg-black col-6 col-sm-4 col-lg-3">
+                            <img src="assets/images/vampyr.jpg" class="card-img-top" alt="Vampyr">
+                            <div class="card-body">
+                            <h5 class="card-text text-truncate text-white h6">Vampyr</h5>
+                            <p class="text-muted text-truncate">DONTNOD Entertainment | Focus Home Interactive</p>
+                            <div class="d-flex">
+                                <span class="text-orange">$39.99</span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card bg-black col-6 col-sm-4 col-lg-3">
+                            <img src="assets/images/assassins-creed-origins-cover.jpg" class="card-img-top" alt="Assasins Creed Origins">
+                            <div class="card-body">
+                            <h5 class="card-text text-truncate text-white h6">Assasins Creed Origins</h5>
+                            <p class="text-muted text-truncate">Ubisoft</p>
+                            <div class="d-flex">
+                                <span class="text-orange">$58.99</span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card bg-black col-6 col-sm-4 col-lg-3">
+                            <img src="assets/images/spellbreak.png" class="card-img-top" alt="Spellbreak">
+                            <div class="card-body">
+                            <h5 class="card-text text-truncate text-white h6">Spellbreak</h5>
+                            <p class="text-muted text-truncate">Proleraiat Inc</p>
+                            <div class="d-flex">
+                                <span class="text-orange">Free</span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card bg-black col-6 col-sm-4 col-lg-3">
+                            <img src="assets/images/wow.jpg" class="card-img-top" alt="WoW">
+                            <div class="card-body">
+                            <h5 class="card-text text-truncate text-white h6">Wprld of Warcraft</h5>
+                            <p class="text-muted text-truncate">Blizard Entertainment</p>
+                            <div class="d-flex">
+                                <span class="text-orange">$36.99</span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card bg-black col-6 col-sm-4 col-lg-3">
+                            <img src="assets/images/as-cr-odys.jpg" class="card-img-top" alt="Assasins Creed Odyssey">
+                            <div class="card-body">
+                            <h5 class="card-text text-truncate text-white h6">Assasins Creed Odyssey</h5>
+                            <p class="text-muted text-truncate">Ubisoft</p>
+                            <div class="d-flex">
+                                <span class="text-orange">Free</span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card bg-black col-6 col-sm-4 col-lg-3">
+                            <img src="assets/images/windbound.jpg" class="card-img-top" alt="Winbound">
+                            <div class="card-body">
+                            <h5 class="card-text text-truncate text-white h6">WindBound</h5>
+                            <p class="text-muted text-truncate">5 Lives Studio | Deep SIlver</p>
+                            <div class="d-flex">
+                                <span class="text-orange">$29.99</span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card bg-black col-6 col-sm-4 col-lg-3">
+                            <img src="assets/images/darksiders2.jpg" class="card-img-top" alt="Darksiders 2">
+                            <div class="card-body">
+                            <h5 class="card-text text-truncate text-white h6">Darksiders 2</h5>
+                            <p class="text-muted text-truncate">Gunfire Games, Vigil Games, THQ Nordic | THQ Nordic</p>
+                            <div class="d-flex">
+                                <span class="text-orange">$29.99</span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card bg-black col-6 col-sm-4 col-lg-3">
+                            <img src="assets/images/shadowrun.jpg" class="card-img-top" alt="Shadowrun Returns">
+                            <div class="card-body">
+                            <h5 class="card-text text-truncate text-white h6">Shadowrun Returns</h5>
+                            <p class="text-muted text-truncate">Harebrained Schemes | Harebrained Schemes</p>
+                            <div class="d-flex">
+                                <span class="text-orange">Coming Soon</span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card bg-black col-6 col-sm-4 col-lg-3">
+                            <img src="assets/images/as-cr-odys.jpg" class="card-img-top" alt="Assasins Creed Rogue">
+                            <div class="card-body">
+                            <h5 class="card-text text-truncate text-white h6">Assasins Creed Rogue</h5>
+                            <p class="text-muted text-truncate">Ubisoft</p>
+                            <div class="d-flex">
+                                <span class="text-orange">$54.00</span>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </div>         
+       </div>
+    </main> 
+    <footer>
+    </footer>
+    <!-- Compiled and minified JavaScript -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="assets/js/main.js"></script> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

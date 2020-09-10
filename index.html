@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cmiki Games</title>    
+    <meta name="author" content="Jovana Lazarevic"/>    
+	<meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <!-- My CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="d-flex justify-content-between align-items-center">
+        <div id="left-menu" class="col-sm-7 col-md-8 col-lg-7">
+            <a href="index.html" id="aLogo"><img id="logo" class="img-fluid mx-2" src="assets/images/logo1.png" alt="Epic Games Logo"></a>
+            <a href="index.html" class="h5 mx-2 pb-4 text-white">Store</a>
+            <a href="news.html" class="h5 mx-2 pb-4">News</a>
+        </div>
+        <div id="right-menu" class="d-none d-sm-block col-4 col-sm-4 col-md-4 col-lg-3 mb-2"> 
+            <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4" data-toggle="modal" data-target="#modalLoginForm">Log in</a>
+            <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4" data-toggle="modal" data-target="#modalRegisterForm">Sign Up</a>
+            <a href="author.html" class="mx-2 mx-sm-1 mx-lg-2 pb-4">Author</a>
+        </div>
+        <!-- <div class="d-block d-sm-none"><a href="#" id="menu"></a></div> -->
+        <button type="button" class="btn btn-demo d-block d-sm-none" data-toggle="modal" data-target="#sidebar">
+            <i class="fas fa-bars text-white mr-3"></i>
+        </button>
+        <div class="modal left fade" id="sidebar" tabindex="" role="dialog" aria-labelledby="sidebar" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="nav flex-column">
+                            <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4" data-toggle="modal" data-target="#modalLoginForm">Log in</a>
+                            <a href="#" class="mx-2 mx-sm-1 mx-lg-2 pb-4" data-toggle="modal" data-target="#modalRegisterForm">Sign Up</a>
+                            <a href="author.html" class="mx-2 mx-sm-1 mx-lg-2 pb-4">Author</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- MODAL LOG -->
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="text-white modal-dialog" role="document">
+            <div class="modal-content bg-gray-dark">
+            <div class="modal-header text-center border-color-white">
+                <h4 class="modal-title w-100 font-weight-bold bg-gray-dark">Log In</h4>
+                <button type="button" class="text-white close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="obrada.php" method="POST">
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-3">
+                        <i class="fas fa-envelope prefix text-white"></i>
+                        <label class="text-white" for="emailReg">Email</label>
+                        <input type="email" id="emailReg" name="emailReg" class="form-control fc1">
+                    </div>
+    
+                    <div class="md-form mb-2">
+                        <i class="fas fa-lock prefix text-white"></i>
+                        <label class="text-white" for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-control fc1">
+                    </div>
+    
+                </div>
+                <div class="modal-footer d-flex justify-content-center border-color-white">
+                    <button type="submit" id="btnLog" name="btnLog" class="btn btn-white font-weight-bold text-white btn-hover rounded-lg border">Log In</button>
+                </div>
+            </form>
+        </div>
+        </div>
+        </div>
+        <!-- KRAJ MODAL LOG -->
+         <!-- MODAL ZA REGISTRACIJU -->
+         <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+         <div class="text-white modal-dialog" role="document">
+         <div class="modal-content bg-gray-dark">
+             <div class="modal-header text-center border-color-white">
+             <h4 class="modal-title w-100 font-weight-bold text-white">Sing Up</h4>
+             <button type="button" class="text-white close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+             </div>
+             <form action="obrada1.php" method="POST">
+                 <div class="modal-body mx-3">
+                 <div class="md-form mb-3">
+                     <i class="fas fa-user prefix text-white"></i>
+                     <label class="text-white" for="name">Username</label>
+                     <input type="text" id="name" name="name" class="form-control fc1">
+                 </div>
+                 <div class="md-form mb-3">
+                     <i class="fas fa-envelope prefix text-white"></i>
+                     <label class="text-white" for="emailReg">Email</label>
+                     <input type="email" id="emailReg" name="emailReg" class="form-control fc1">
+                 </div>
+         
+                 <div class="md-form mb-3">
+                     <i class="fas fa-lock prefix text-white"></i>
+                     <label class="text-white" for="password">Password</label>
+                     <input type="password" id="password" name="password" class="form-control fc1">
+                 </div>
+                 
+                 <div class="md-form mb-2">
+                     <i class="fas fa-lock prefix text-white"></i>
+                     <label class="text-white" for="passwordRepeat">Confirm password</label>
+                     <input type="password" id="passwordRepeat" name="passwordRepeat" class="form-control fc1">
+                     <div class="text-white mt-1"></div>
+                 </div>
+ 
+                 </div>
+                 <div class="modal-footer d-flex justify-content-center">
+                 <button type="submit" id="btnReg" name="btnReg" class="btn btn-white font-weight-bold text-white rounded-lg border border-color-white border-size-1 hover1">Sign Up</button>
+                 </div>
+             </form>
+         </div>
+         </div>
+     </div>
+     <!-- KRAJ MODALA REGISTRACIJA -->
+    <main class="bg-black">
+       <div id="cover">
+            <div id="pre-content" class="d-flex justify-content-between py-4 align-items-center">
+                <div id="left-pc" class="col-7 col-sm-8">
+                    <a href="index.html">Discover</a>
+                    <a href="browse.html" class="mx-2">Browse</a>
+                </div>
+                <div id="right-pc" class="col-5 col-sm-4 col-md-3 col-lg-2">
+                    <input type="search" id="Pretraga" placeholder="Search" class="p-2 rounded border"/>
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>            
+            <!-- SLAJDER -->
+                <div id="slider" class="container mh-75 my-3 p-0">
+                    <div id="carouselSlide" class="carousel slide h-100 w-100" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                    <li data-target="#carouselSlide" data-slide-to="0" class="active bg-orange"></li>
+                    <li data-target="#carouselSlide" data-slide-to="1" class="bg-orange"></li>
+                    <li data-target="#carouselSlide" data-slide-to="2" class="bg-orange"></li>
+                    <li data-target="#carouselSlide" data-slide-to="3" class="bg-orange"></li>
+                    <li data-target="#carouselSlide" data-slide-to="4" class="bg-orange"></li>
+                    <li data-target="#carouselSlide" data-slide-to="5" class="bg-orange"></li>
+                    </ol>
+                    <div class="carousel-inner h-100">
+                        <div class='carousel-item active mr-0 mx-0 h-100 w-100'>          
+                            <h1 class="text-white text-center position-relative display-3">CMIKI GAMES STORE</h1>
+                            <p class="text-muted text-center position-relative h5">Find your game and start your thrilling adventure</p>
+                        </div>
+                        <div class='carousel-item mr-0 mx-0 h-100 w-100'>          
+                            <div class='d-md-flex justify-content-between h-100 w-100'>
+                                <div class="col-sm-12 col-md-7"><img class='img-fluid w-100' src="assets/images/skater.webp" alt='Skater™ game'></div>
+                                <div id="desc" class="col-sm-12 col-md-5 text-white-50">
+                                    <small class="text-uppercase text-white-50">Available now</small>
+                                    <h3 class="text-white">Tony Hawk's™ Pro Skater™ 1 + 2</h3>
+                                    <p class="text-wrap w-75">Play the fully-remastered Tony Hawk’s™ Pro Skater™ & Tony Hawk’s™ Pro Skater™ 2 games in one epic collection, rebuilt from the ground up in incredible HD.</p>
+                                    <a href="#">Let's Skate!<i class="fas fa-arrow-right ml-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='carousel-item h-100 mr-0 mx-0'>          
+                            <div class='d-md-flex justify-content-between h-100 w-100'>
+                                <div class="col-sm-12 col-md-7"><img class='img-fluid w-100' src="assets/images/fortnite.jpg" alt='Fortnite Game'></div>
+                                <div id="desc" class="col-sm-12 col-md-5 text-white-50">
+                                    <small class="text-uppercase text-white-50">new season</small>
+                                    <h3 class="text-white">Fortnite: Season 4</h3>
+                                    <p class="text-wrap w-75">The Lore, Legends, and Heroes from Marvel have arrived. Join a fight and teke on Galactus to save all of Reality.</p>
+                                    <a href="#">Join the fight<i class="fas fa-arrow-right ml-2"></i></a>
+                                </div>
+                            </div>
+                        </div>                         
+                        <div class='carousel-item mr-0 mx-0 h-100 w-100'>          
+                            <div class='d-md-flex justify-content-between w-100'>
+                                <div class="col-sm-12 col-md-7"><img class='img-fluid w-100' src="assets/images/surgeons.jpg" alt='Fortnite Game'></div>
+                                <div id="desc" class="col-sm-12 col-md-5 text-white-50">
+                                    <small class="text-uppercase text-white-50">new season</small>
+                                    <h3 class="text-white">Surgeon Simulator 2</h3>
+                                    <p class="text-wrap w-75">With new operations, a thrilling story mode & 4-player online co-op, play Surgeon Simulator 2 now!</p>
+                                    <a href="#">Buy Now<i class="fas fa-arrow-right ml-2"></i></a>
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class='carousel-item mr-0 mx-0 h-100 w-100'>          
+                            <div class='d-md-flex justify-content-between w-100'>
+                                <div class="col-sm-12 col-md-7"><img class='img-fluid h-100 w-100' src="assets/images/nsr.png" alt='Fortnite Game'></div>
+                                <div id="desc" class="col-sm-12 col-md-5 text-white-50">
+                                    <small class="text-uppercase text-white-50">Available now</small>
+                                    <h3 class="text-white">No Straight Roads</h3>
+                                    <p class="text-wrap w-75">Experience third-person combat with a kick-ass soundtrack!</p>
+                                    <a href="#">Learn More<i class="fas fa-arrow-right ml-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='carousel-item mr-0 mx-0 h-100 w-100'>          
+                            <div class='d-md-flex justify-content-between w-100'>
+                                <div class="col-sm-12 col-md-7"><img class='img-fluid h-100 w-100' src="assets/images/tlc.jpg" alt='Fortnite Game'></div>
+                                <div id="desc" class="col-sm-12 col-md-5 text-white-50">
+                                    <small class="text-uppercase text-white-50">Available now</small>
+                                    <h3 class="text-white">The Last Campfire</h3>
+                                    <p class="text-wrap w-75">Explore a story of a lost ember lost in a puzzling place, searching for meaning and a way home.</p>
+                                    <a href="#">Learn More<i class="fas fa-arrow-right ml-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END SLAJDER -->
+            <div id="rel" class="holder px-3 mt-4">
+                <h4 class="h5 text-white letter-sp-08 mb-5">New Releases</h4>
+                <div class="row row-cols-sm-6 row-cols-md-4 row-cols-lg-5">
+                    <div class="card bg-black col-sm-6 col-md-3">
+                        <img src="assets/images/kingdoms.jpg" class="card-img-top" alt="Kingdoms of Amalur Re-Reckoning">
+                        <div class="card-body">
+                          <h5 class="card-text text-truncate text-white h6">Kingdoms of Amalur Re-Reckoning</h5>
+                          <p class="text-muted text-truncate">KAIKO, Big Huge Games | THQ Nordic</p>
+                          <div class="d-flex justify-content-evenly">
+                            <span class="badge badge-secondary bg-orange">-10%</span>
+                            <del class="text-muted">$39.99</del>
+                            <span class="text-orange">$35.99</span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="card bg-black col-sm-6 col-md-3">
+                        <img src="assets/images/diabotical.png" class="card-img-top" alt="Diabotical">
+                        <div class="card-body">
+                          <h5 class="card-text text-truncate text-white h6">Diabotical</h5>
+                          <p class="text-muted text-truncate">The GD Studio</p>
+                          <div class="d-flex">
+                            <span class="text-orange">Free</span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="card bg-black col-sm-6 col-md-3">
+                        <img src="assets/images/skater1.jpg" class="card-img-top" alt="Tony Hawk’s™ Pro Skater™ 1+2">
+                        <div class="card-body">
+                          <h5 class="card-text text-truncate text-white h6">Tony Hawk’s™ Pro Skater™ 1+2</h5>
+                          <p class="text-muted text-truncate">Vicarious Visions | Activision</p>
+                          <div class="d-flex">
+                            <span class="text-orange">$39.99</span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="card bg-black col-sm-6 col-md-3">
+                        <img src="assets/images/wrc9.jpg" class="card-img-top" alt="WRC 9 FIA World Rally Championship">
+                        <div class="card-body">
+                          <h5 class="card-text text-truncate text-white h6">WRC 9 FIA World Rally Championship</h5>
+                          <p class="text-muted text-truncate">KT Racing| Nacon</p>
+                          <div class="d-flex">
+                            <span class="text-orange">$49.99</span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="card bg-black d-none d-lg-block col-2">
+                        <img src="assets/images/spellbreak.png" class="card-img-top" alt="Spellbreak">
+                        <div class="card-body">
+                          <h5 class="card-text text-truncate text-white h6">Spellbreak</h5>
+                          <p class="text-muted text-truncate">Proleraiat Inc</p>
+                          <div class="d-flex">
+                            <span class="text-orange">Free</span>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="poster m-auto my-4 position-relative">
+                <div class="position-absolute note">
+                    <h2 class="text-white">Crysis Remastered</h2>
+                    <p class="text-white-50 w-50 text-wrap">The classic first-person shooter from Crytek is back.</p>
+                    <button type="button" class="btn btn-secondary btn-lg text-uppercase">Wishlist Now</button>
+                </div>
+            </div>
+            <div id="cs" class="holder px-3 mt-4">
+                <h4 class="h5 text-white letter-sp-08 mb-5">Coming Soon</h4>
+                <div class="row row-cols-1 row-cols-md-3">
+                    <div class="card bg-black col-sm-12 col-md-4">
+                        <img src="assets/images/crysis-poster.jpg" class="card-img-top" alt="Crysis Remastered">
+                        <div class="card-body">
+                          <h5 class="card-text text-truncate text-white h6">Crysis Remastered</h5>
+                          <p class="text-muted text-truncate">Crytek</p>
+                          <p class="text-orange">Coming Soon</p>
+                        </div>
+                    </div>
+                    <div class="card bg-black col-sm-12 col-md-4">
+                        <img src="assets/images/godfall.jpg" class="card-img-top" alt="Godfall">
+                        <div class="card-body">
+                          <h5 class="card-text text-truncate text-white h6">Godfall</h5>
+                          <p class="text-muted text-truncate">Counterplay Games | Gearbox Publishing</p>
+                          <p class="text-orange">Coming Soon</p>
+                         
+                        </div>
+                    </div>
+                    <div class="card bg-black col-sm-12 col-md-4">
+                        <img src="assets/images/hitman3.jpg" class="card-img-top" alt="Hitman 3">
+                        <div class="card-body">
+                          <h5 class="card-text text-truncate text-white h6">Hitman 3</h5>
+                          <p class="text-muted text-truncate">IO Interactive</p>
+                          <p class="text-orange">$59.99</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="h5 text-white letter-sp-08 pl-4 mb-md-5">Cmiki Games Store Catalog</h4>
+            <div class="browse m-auto my-4 position-relative">
+                <div class="note position-absolute">
+                    <h2 class="text-white">Browse</h2>
+                    <p class="text-white-50 w-50 text-wrap">Explore our catalog for your next favorite game!</p>
+                    <a href="browse.html" class="btn btn-secondary btn-lg text-uppercase text-white">Browse All</a>
+                </div>
+            </div>
+       </div>
+    </main> 
+    <footer>
+    </footer>
+    <!-- Compiled and minified JavaScript -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="assets/js/main.js"></script> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

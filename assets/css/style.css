@@ -1,0 +1,441 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Francois One', sans-serif;
+  font-weight: 400;
+  font-size: .875rem;
+  line-height: 1.43;
+  font-weight: lighter;
+}
+
+.bg-gray-dark {
+  background-color: #2a2a2a;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.bg-orange {
+  background-color: #f86c1b !important;
+}
+
+.text-orange {
+  color: #f86c1b;
+}
+
+.justify-content-evenly {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.letter-sp-08 {
+  letter-spacing: 0.8pt;
+}
+
+.h6 {
+  font-size: 17px !important;
+}
+
+hr {
+  border-bottom: 1px solid #f86c1b;
+  width: 100px;
+}
+
+a {
+  text-decoration: none !important;
+  color: #ccc;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+a:hover {
+  color: #f86c1b;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#cover {
+  margin: 0 auto;
+  width: 80%;
+}
+
+#cover a {
+  font-size: 15px;
+}
+
+header {
+  background-color: #2a2a2a;
+  padding: 3px;
+}
+
+header a {
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: #ccc;
+  font-size: 18px;
+}
+
+header a:hover {
+  color: #ffffff;
+  border-bottom: 4px solid #f86c1b;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header #aLogo {
+  border-bottom: none;
+}
+
+#logo {
+  width: 65px;
+  opacity: 0.9;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#logo:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.modal label {
+  font-size: 17px;
+}
+
+.modal button[type="button"] span {
+  font-size: 25px;
+}
+
+#right-pc {
+  position: relative;
+}
+
+#right-pc i {
+  left: 140px;
+  bottom: 10px;
+  position: absolute;
+  color: #f86c1b;
+}
+
+input {
+  color: #f86c1b !important;
+}
+
+input:active, input:focus {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.carousel-indicators {
+  top: 350px;
+}
+
+#slider {
+  height: 350px !important;
+}
+
+#slider h1 {
+  top: 80px;
+}
+
+#slider p {
+  top: 100px;
+}
+
+.holder p {
+  font-size: 15px;
+}
+
+.holder span, .holder del {
+  font-size: 15px;
+}
+
+.card:hover::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: rgba(20, 20, 20, 0.1);
+}
+
+.card::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: rgba(20, 20, 20, 0.4);
+}
+
+.text-small {
+  font-size: 14px !important;
+}
+
+.card .news .mess {
+  font-size: 16px !important;
+}
+
+.card .news a {
+  font-size: 14px !important;
+}
+
+#rel .card:hover::before {
+  bottom: 30%;
+}
+
+#rel .card::before {
+  bottom: 30%;
+}
+
+#cs .card:hover::before {
+  bottom: 35%;
+}
+
+#cs .card::before {
+  bottom: 35%;
+}
+
+.poster, .browse {
+  height: 350px;
+  width: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.poster .note, .browse .note {
+  top: 130px;
+  left: 65px;
+}
+
+.poster .note p, .browse .note p {
+  font-size: 15px;
+}
+
+.poster .note button, .browse .note button {
+  font-size: 12px;
+}
+
+.poster .note a, .browse .note a {
+  font-size: 10px;
+}
+
+.browse {
+  background-image: url("../images/browse.png");
+}
+
+.poster {
+  background-image: url("../images/crysis-poster1.png");
+}
+
+@media screen and (max-width: 1660px) {
+  .browse .note {
+    left: 100px;
+  }
+  .poster .note {
+    left: 170px;
+  }
+  #pre-content a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .browse .note {
+    top: 160px;
+    left: 50px;
+  }
+  .poster .note {
+    top: 160px;
+    left: 110px;
+  }
+}
+
+@media screen and (max-width: 1290px) {
+  .browse .note {
+    top: 140px;
+    left: 40px;
+  }
+  .poster .note {
+    top: 140px;
+    left: 40px;
+  }
+  .carousel-indicators {
+    margin-left: 6% !important;
+    margin-right: 6% !important;
+  }
+  .card p, .card del, .card span {
+    font-size: 13px !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .carousel-indicators {
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  #cover {
+    width: 85%;
+  }
+  .carousel-indicators {
+    top: 230px;
+    left: 600px;
+  }
+  .browse .note {
+    top: 100px !important;
+  }
+  .poster .note {
+    top: 120px !important;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #cover {
+    width: 85%;
+  }
+  .carousel-indicators {
+    top: 250px;
+  }
+  .browse .note {
+    top: 100px !important;
+  }
+  .poster .note {
+    top: 120px !important;
+  }
+  .note h2 {
+    font-size: 16px !important;
+  }
+  .note p {
+    font-size: 14px !important;
+  }
+  .note a, .note button {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #slider {
+    height: 300px !important;
+  }
+  header a {
+    font-size: 14px !important;
+  }
+  #header a {
+    font-size: 14px !important;
+  }
+  .card p, .card span, .card del {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #slider {
+    height: 440px !important;
+  }
+  .carousel-indicators {
+    top: 395px;
+    left: 250px;
+  }
+  .note h2 {
+    font-size: 15px !important;
+  }
+  .note p {
+    font-size: 13px !important;
+  }
+  .note a {
+    font-size: 10px !important;
+  }
+  .poster .note {
+    top: 130px !important;
+  }
+  .browse .note {
+    top: 110px !important;
+  }
+  .poster, .browse {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  hr {
+    border-bottom: none;
+    border-right: 1px solid #f86c1b;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-indicators {
+    top: 370px;
+    left: 250px;
+  }
+  header a {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #pre-content a {
+    font-size: 14px !important;
+  }
+  .carousel-indicators {
+    top: 370px;
+    left: 250px;
+  }
+  header a {
+    font-size: 12px !important;
+  }
+  .note h2 {
+    font-size: 12px !important;
+  }
+  .note p {
+    font-size: 10px !important;
+  }
+  .note a, .note button {
+    font-size: 7px !important;
+  }
+  .poster .note {
+    top: 140px !important;
+  }
+  .browse .note {
+    top: 130px !important;
+  }
+}
+
+.modal.left .modal-dialog {
+  position: fixed;
+  right: 0;
+  margin: auto;
+  width: 120px;
+  height: 25%;
+  -webkit-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.modal.right .modal-body {
+  padding: 15px 15px 80px;
+}
+
+.modal.right.fade .modal-dialog {
+  left: -320px;
+  -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+  transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.modal.right.fade.show .modal-dialog {
+  right: 0;
+}
+/*# sourceMappingURL=style.css.map */
