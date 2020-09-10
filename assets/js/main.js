@@ -24,6 +24,11 @@ function PromeniCSSPoVeliciniEkrana(){
   }
 }
 
+//REGULRANI IZRAZI
+var reEmail,rePassword;
+reEmail = /^([a-z]{3,}\d{0,}\@((gmail|yahoo)\.com)|ict\.edu\.rs)|([a-z]{3,}\d{0,}\.[a-z]{3,}\d{0,}\@((gmail|yahoo)\.com)|ict\.edu\.rs)$/;
+rePassword= /^(?:(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15})$/;
+
 //LOGOVANJE
 function proveraLog(e){
     e.preventDefault();
